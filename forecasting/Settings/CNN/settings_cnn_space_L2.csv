@@ -1,0 +1,8 @@
+﻿name;type;categories;lower_bound;upper_bound;transform
+activation_3dconv_1;Categorical;relu,elu,leakyrelu;;;
+activation_3dconv_2;Categorical;relu,elu,leakyrelu;;;
+activation_3dconv_3;Categorical;relu,elu,leakyrelu;;;
+activation_3d_transp_conv;Categorical;relu,elu,leakyrelu;;;
+activation_dense_1;Categorical;relu,elu,leakyrelu;;;
+activation_dense_2;Categorical;relu,elu,leakyrelu;;;
+activation_local_con;Categorical;relu,elu,leakyrelu;;;

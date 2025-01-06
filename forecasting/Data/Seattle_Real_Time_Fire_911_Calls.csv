@@ -1,0 +1,6 @@
+Address,Type,Datetime,Latitude,Longitude,Report Location,Incident Number
+1 Some St,Car Fire,03/01/2018 01:00:00 PM,46.1234,-121.1234,POINT (-121.1234 46.1234),F12345678
+2 Some St,Aid Response,04/10/2017 01:00:00 PM,46.1234,-121.1234,POINT (-121.1234 46.1234),F12345679
+3 Some St,Medic Response,09/25/2020 07:00:00 PM,46.1234,-121.1234,POINT (-121.1234 46.1234),F12345680
+
+<this-is-just-a-template-fill-with-data>

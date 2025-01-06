@@ -1,0 +1,88 @@
+---
+  # 1. General Settings
+  start: '2020-01-01 00:00:00'
+  end: '2022-01-01 00:00:00'
+  total_look_back: 6 
+  time_interval: 8H
+  nrRows: 11 # ~2.5km
+  nrCols: 6 # ~2.5km
+  calldata: 'Seattle' 
+  min_lat: 47.494899
+  max_lat: 47.734484
+  min_lon: -122.429236
+  max_lon: -122.232596
+  incident_types: 'Medic Response' 
+  shorten_one_hot: True # If true, one-hot encoded vectors are optimized
+  load_data_storage_path: './Data/data_storage_8h_medic.p' # path to data storage, if not existant, new data storage is created
+  save_data_storage_path: # path where to save data storage, if None, data storage is not saved
+  features_csv: './Settings/Features/Feature_Settings.csv' #path to .csv containing feature settings
+
+  # 2. Define Action and adapt settings in the following sections
+  run_model: True  # A) Run model given its settings (see section 4)
+  run_BO: False # B) Run Bayesian Optimization for model with corresponding settings (see section 4 and 5)
+  run_hierarchical_BO: False # C) Run Hierarchical Bayesian Optimization for model with corresponding settings (see section 4 and 5)
+  grid_search_tree: False # D) Run optimization of trees
+  medic_method: False # E) Run Medic method
+  calculate_shap_values: False # F) Calculate SHAP Values
+
+  # 3. Define where results should be saved
+  output_path: "./Results/" 
+  output_data: True # If True, training & test data sets are saved in output_path 
+
+  # 4. Only for A), B), C) and D): General Model Settings
+  model: 'MLP' # Options: "CNN" / "MLP" / "RandomForest" / "DecisionTree"
+  model_settings: './Settings/MLP/settings_mlp.yaml'
+
+  # 5. Additional settings dependent which action you defined in section 2
+  #   B) Bayesian Optimization
+  space_csv: './Settings/CNN/settings_cnn_space.csv' # Path tp space csv-file
+  prior: 'GP' # "GP", "ET" or "RF" (if BO with dropout is applied, this must be set to "GP")
+  nr_calls: 1500 # Nr. of iteration (incl. random search for initialization)
+  optimize_features: True # If True, feature selection is conducted
+  n_initial_points: 500 # Nr. of iterations conducting random search for initialization
+  bayesian_dropout: False # If true, BO with dimension dropout activated
+  # Settings for BO with dimension dropout
+  p: 0.2 # probability for copying incumbent values for fill-up 
+  d: 0.25 # proportion of dimensions considered in acquisition function
+  x0: # path containing initial x0 values
+  y0: # path containing initial y0 values
+
+  #   C) Hierarchical Bayesian Optimization
+  priors_hierarchical_BO: # list of priors to be applied in BO ("GP", "ET" and "RF" possible)
+    - 'GP'
+    - 'ET'
+    - 'RF'
+  space_csv_hierarchical_BO: # list of space csv-files to be applied (each file represents one level)
+    - './Settings/MLP/settings_mlp_space_L0.csv'
+    - './Settings/MLP/settings_mlp_space_L1.csv'
+    - './Settings/MLP/settings_mlp_space_L2.csv'
+    - './Settings/MLP/settings_mlp_space_L3.csv'
+  nr_calls_hierarchical_BO: 250 # number of runs per level
+  n_initial_points_hierarchical_BO: 25 # number of initial point per level
+  optimize_features_level: 0 # level at which features are optimized, if empty, no feature selection conducted
+
+  #   D) Optimize Trees
+  max_depth_lower: 2 # used for RF and DT
+  max_depth_upper: 50 # used for RF and DT
+  max_depth_stepsize: 2 # used for RF and DT
+  n_estimators_lower: 50 # only used for RF
+  n_estimators_upper: 150 # only used for RF
+  n_estimators_setpsize: 50 # only used for RF
+
+  #   E) MEDIC method
+  medic_earlierst_data: '2017-06-01 00:00:00' # data earlier than this date not considered in calculations
+  nr_weeks_to_include: 4
+  nr_years_to_include: 5 
+
+  #   F) SHAP Values
+  model_path: "./Shap/Data_MLP/model.h5" # path to model (can be .p or .h5)
+  X_train_path: "./Shap/Data_MLP/X_train.p" # path to training set (independent variables only)
+  X_test_path: "./Shap/Data_MLP/X_test.p" # path to test set (independent variables only)
+  features_overview_path: "./Shap/Data_MLP/features_dict.p" # path to features dict
+  ninstances_explain: 50
+  ninstances_train: 300
+  multiplier: 1 # (#rows*#columns) for MLP and RF, 1 for CNN
+  nsamples: "auto"
+  explainer: "sampling"  # MLP, CNN: 'sampling'; RF: 'tree'
+  transform_to_single_input: True #True for CNN, else False
+...

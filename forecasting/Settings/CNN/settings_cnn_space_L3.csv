@@ -1,0 +1,9 @@
+﻿name;type;categories;lower_bound;upper_bound;transform
+batch_size;Categorical;32,64,128;;;
+dropout_dense_1;Real;;0;0.5;normalize
+l2_kernel_regularizer_3dconv_1;Real;;0;0.5;normalize
+l2_kernel_regularizer_3dconv_2;Real;;0;0.5;normalize
+l2_kernel_regularizer_3dconv_3;Real;;0;0.5;normalize
+l2_kernel_regularizer_3d_transp_conv;Real;;0;0.5;normalize
+learning_rate;Real;;0.000001;0.1;normalize
+optimizer;Categorical;Adam,SGD;;;

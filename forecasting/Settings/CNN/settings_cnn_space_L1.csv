@@ -1,0 +1,8 @@
+﻿name;type;categories;lower_bound;upper_bound;transform
+kernalSize_3dconv_1;Integer;;2;6;normalize
+kernalSize_3dconv_2;Integer;;2;6;normalize
+nrFilters_3dconv_1;Integer;;1;128;normalize
+nrFilters_3dconv_2;Integer;;1;128;normalize
+nrFilters_3dconv_3;Integer;;1;128;normalize
+nrFilters_3d_transp_conv;Integer;;1;128;normalize
+nrUnits_dense_1;Integer;;1;240;normalize

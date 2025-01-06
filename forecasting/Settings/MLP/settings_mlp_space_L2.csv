@@ -1,0 +1,6 @@
+﻿name;type;categories;lower_bound;upper_bound;transform
+activation_1;Categorical;relu,elu,leakyrelu;;;
+activation_2;Categorical;relu,elu,leakyrelu;;;
+activation_3;Categorical;relu,elu,leakyrelu;;;
+activation_4;Categorical;relu,elu,leakyrelu;;;
+activation_outputs;Categorical;relu,elu,leakyrelu;;;

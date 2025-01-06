@@ -1,0 +1,6 @@
+Application Date,Permit Status,Permit Type,Event Category,Event Sub-Category,Name of Event,Year-Month-App#,Event Start Date,Event End Date,Event Location - Park,Event Location - Neighborhood,Council District,Precinct,Organization,Attendance
+12/13/2021 12:00:00 AM,In Process,Special Event,Athletic,Run/Walk,Sunset Run,S1234456,12/13/2022 10:00:00 AM,12/13/2022 12:00:00 AM,Alki Beach,Alki / Admiral,1,"Southwest, Traffic",Some Organization,1000
+01/07/2021 12:00:00 AM,In Process,Special Event,Athletic,Run/Walk,Summer Run,S1234457,01/07/2022 10:00:00 AM,01/07/2022 12:00:00 AM,Seward Park,Seward Park,2,South,Some Other Organization,1500
+01/10/2021 12:00:00 AM,In Process,Special Event,Athletic,Water,Water Swim,S1234458,01/10/2022 10:00:00 AM,01/10/2022 12:00:00 AM,Madison Park,Madison Park,3,"East, Harbor",Some Organization,500
+
+<this-is-just-a-template-fill-with-data>

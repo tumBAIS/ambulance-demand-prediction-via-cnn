@@ -1,0 +1,25 @@
+---
+    activation_3dconv_1: 'elu'
+    activation_3dconv_2: 'relu'
+    activation_3dconv_3: 'elu'
+    activation_3d_transp_conv: 'relu'
+    activation_dense_1: 'relu'
+    activation_dense_2: 'leakyrelu'
+    activation_local_con: 'leakyrelu'
+    batch_size: 64
+    dropout_dense_1: 0.10993912564129962
+    kernalSize_3dconv_1: 3
+    kernalSize_3dconv_2: 3
+    l2_kernel_regularizer_3dconv_1: 0.28709129346432133
+    l2_kernel_regularizer_3dconv_2: 0.07882173519271642
+    l2_kernel_regularizer_3dconv_3: 0.05528637649124714
+    l2_kernel_regularizer_3d_transp_conv: 0.4054361535262952
+    learning_rate: 0.03740959732543851
+    nrFilters_3dconv_1: 109
+    nrFilters_3dconv_2: 64
+    nrFilters_3dconv_3: 112
+    nrFilters_3d_transp_conv: 48
+    nrUnits_dense_1: 237
+    optimizer: 'Adam'
+...
+

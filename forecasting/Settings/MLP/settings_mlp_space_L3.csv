@@ -1,0 +1,8 @@
+﻿name;type;categories;lower_bound;upper_bound;transform
+batch_size;Categorical;32,64,128,256;;;
+dropout_1;Real;;0;0.5;normalize
+dropout_2;Real;;0;0.5;normalize
+dropout_3;Real;;0;0.5;normalize
+dropout_4;Real;;0;0.5;normalize
+learning_rate;Real;;0.000001;0.0001;normalize
+optimizer;Categorical;Adam,SGD;;;

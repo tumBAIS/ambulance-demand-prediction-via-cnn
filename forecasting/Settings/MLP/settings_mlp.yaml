@@ -1,0 +1,20 @@
+---
+  activation_1: 'leakyrelu'
+  activation_2: 'leakyrelu'
+  activation_3: 'relu'
+  activation_4: 'leakyrelu'
+  activation_outputs: 'leakyrelu'
+  batch_size: 64
+  dropout_1: 0.397216730557714
+  dropout_2: 0.400663049816623
+  dropout_3: 0.07493695313330982
+  dropout_4: 0.1861735970421877
+  learning_rate: 6.502870259107148e-05
+  nrLayers: 3
+  nrUnits_1: 38
+  nrUnits_2: 44
+  nrUnits_3: 76
+  nrUnits_4: 82
+  optimizer: 'Adam'
+...
+

@@ -1,0 +1,9 @@
+---
+    name: 'DecTree'
+    random_state: 0
+    criterion: 'squared_error'
+    test_size: 0.2
+    max_depth: 5
+    model: 
+    shuffle_data: False
+...

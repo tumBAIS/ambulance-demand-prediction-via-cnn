@@ -1,0 +1,10 @@
+---
+    name: 'RanForest'
+    random_state: 0
+    criterion: 'squared_error'
+    test_size: 0.2
+    max_depth: 8
+    n_estimator: 50
+    oob_score: True
+    shuffle_data: False
+...
